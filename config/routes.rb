@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :tasks, only: [:create, :index, :destroy]
+  get 'tasks', to: "tasks#index"
+  get "tasks/:id", to:"tasks#show"
   root 'tasks#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

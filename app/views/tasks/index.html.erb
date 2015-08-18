@@ -1,7 +1,15 @@
 <h1>TO DO:</h1>
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <%= task.id %>.
+    <%= task.name %>
+    <% if task.done %>
+      <i class="fa fa-check"></i>
+    <% else %>
+      <i class="fa fa-times"></i>
+    <% end %>
 
-<%= @tasks.each do |task| %>
-  <h2>TODO : <%= task.name %> </h2>
-  <p>Done : <%= task.done %> </p>
-
+  </li>
 <% end %>
+</ul>
