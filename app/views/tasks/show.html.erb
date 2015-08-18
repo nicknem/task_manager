@@ -7,3 +7,11 @@
       <i class="fa fa-times"></i>
     <% end %>
     </h2>
+
+<p><%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+
+<p><%= link_to "Back to Menu", tasks_path%>
+</p>
+
